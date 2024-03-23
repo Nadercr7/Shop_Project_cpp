@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 #include <windows.h>
 using namespace std;
 
@@ -7,8 +8,7 @@ int main() {
     // Define available items
     string itemNames[] = {"T-shirt", "Jeans", "Sweater"};
     double itemPrices[] = {20, 30, 50};
-    int itemQuantities[] = {10, 10, 10};
-    //random Names, prices and quantities
+    int itemQuantities[] = {8, 6, 6};
 
     // Define user's cart
     const int maxCartSize = 10;
@@ -112,7 +112,21 @@ int main() {
             }
             cout << endl; // Add an extra empty line
         } else if (choice == 5) {
-            cout << "Thank you\n" << endl;
+            cout << "\nThank you\n" << endl;
+            cout << " _________" << endl;
+    cout << "/ ======= \\" << endl;
+    cout << "/ __________\\" << endl;
+    cout << "| ___________ |" << endl;
+    cout << "| | -       | |" << endl;
+    cout << "| |         | |" << endl;
+    cout << "| |_________| |__________________" << endl;
+    cout << "\\=____________/   Nader Mohamed " << endl;
+    cout << " / \"\"\"\"\"\"\"\"\"\"\" \\                       /" << endl;
+    cout << "/ ::::::::::::: \\                           '" << endl;
+    cout << "(_________________)" << endl;
+    return 0;
+
+
         }
     }
 
