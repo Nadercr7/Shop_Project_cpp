@@ -17,13 +17,19 @@ int main() {
     int cartSize = 0;
 
     int choice;
-    cout << R"(
- _   _      _      ____    _____   ____
-| \ | |    / \    |  _ \  | ____| |  _ \
-|  \| |   / _ \   | | | | |  _|   | |_) |
-| |\  |  / ___ \  | |_| | | |___  |  _ <
-|_| \_| /_/   \_\ |____/  |_____| |_| \_\
-)" << endl; // Add an extra empty line
+    cout << "      .-.                       .                   " << endl;
+    cout << "        /  |                   /                    " << endl;
+    cout << "       /\\  |    .-.       .-../        .-.     ).--." << endl;
+    cout << "      /  \\ |   (  |      (   /       ./.-'_   /     " << endl;
+    cout << " .-' /    \\|    `-'-'     `-'-..     (__.'   /      " << endl;
+    cout << "(__.'      `.                                       " << endl;
+    cout << "         .-.                                        " << endl;
+    cout << "   .--.-'         /                                  " << endl;
+    cout << "  (  (_)         /-.    .-._.   .-.                  " << endl;
+    cout << "   `-.          /   |  (   )    /  )                 " << endl;
+    cout << " _    )      _.'    |   `-'    /`-'                  " << endl;
+    cout << "(_.--'                        /                      " << endl;
+ cout << endl; // Add an extra empty line
 
     while (true) {
         cout << "*************************\n\n";
