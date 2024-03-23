@@ -7,7 +7,8 @@ int main() {
     // Define available items
     string itemNames[] = {"T-shirt", "Jeans", "Sweater"};
     double itemPrices[] = {20, 30, 50};
-    int itemQuantities[] = {8, 6, 6};
+    int itemQuantities[] = {10, 10, 10};
+    //random Names, prices and quantities
 
     // Define user's cart
     const int maxCartSize = 10;
