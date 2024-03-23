@@ -93,24 +93,33 @@ int main() {
             Beep(1500, 500);
             cout << endl; // Add an extra empty line
         } else if (choice == 4) {
-            int itemIndex;
+            int itemIndex, numToDelete;
             cout << "Enter the item number to delete from cart: \n";
             cin >> itemIndex;
-            if (itemIndex >= 1 && itemIndex <= cartSize) {
+            cout << "Enter the number of items you want to delete: \n";
+            cin >> numToDelete;
+            if (itemIndex >= 1 && itemIndex <= cartSize && numToDelete > 0 && numToDelete <= cartQuantities[itemIndex - 1]) {
                 int index = itemIndex - 1;
-                cout << "Item " << cartNames[index] << " removed from cart.\n";
-                // Shift items to fill the gap
-                for (int i = index; i < cartSize - 1; ++i) {
-                    cartNames[i] = cartNames[i + 1];
-                    cartPrices[i] = cartPrices[i + 1];
-                    cartQuantities[i] = cartQuantities[i + 1];
+                cout << numToDelete << " item(s) of " << cartNames[index] << " removed from cart.\n";
+                // Adjust quantities in cart
+                cartQuantities[index] -= numToDelete;
+                // If all items of a type are removed from the cart, shift remaining items
+                if (cartQuantities[index] == 0) {
+                    for (int i = index; i < cartSize - 1; ++i) {
+                        cartNames[i] = cartNames[i + 1];
+                        cartPrices[i] = cartPrices[i + 1];
+                        cartQuantities[i] = cartQuantities[i + 1];
+                    }
+                    --cartSize; // Reduce cart size
                 }
-                --cartSize; // Reduce cart size
+                // Add the number of deleted items back to the available items
+                itemQuantities[itemIndex - 1] += numToDelete;
             } else {
-                cout << "Invalid item number.\n";
+                cout << "Invalid input or insufficient quantity.\n";
                 Beep(1500, 500);
             }
             cout << endl; // Add an extra empty line
+
         } else if (choice == 5) {
             cout << "\nThank you\n" << endl;
             cout << " _________" << endl;
